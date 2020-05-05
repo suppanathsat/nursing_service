@@ -1,0 +1,9 @@
+@font-face {
+    font-family: bangna;
+    src: url(../font/bangna-new.ttf);
+}
+
+div {
+    font-family: bangna;
+  }
+  
