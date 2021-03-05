@@ -8,14 +8,7 @@ $username = "your_user";<br>
 $password = "your_password";<br>
 $dbname = "nursing_service";<br>
 <br>
-// Create connection<br>
-$conn = new mysqli($servername, $username, $password, $dbname);<br>
-mysqli_set_charset($conn, "utf8");<br>
-// Check connection<br>
-if ($conn->connect_error) {<br>
-    die("Connection failed: " . $conn->connect_error);<br>
-}<br>
-#
+
 หน้าหลัก<br>
 ![image](https://user-images.githubusercontent.com/80107228/110134977-9469e600-7e00-11eb-96f5-473fbcb09858.png)
 
