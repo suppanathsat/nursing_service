@@ -1,7 +1,8 @@
 # nursingHome
-1 SET WAMP STACK
-2 import nursing_service.sql to mysql database and name it nursing_service
-3 set file connect.php 
+1 SET WAMP STACK <br>
+2 import nursing_service.sql to mysql database and name it nursing_service <br>
+3 set file connect.php <br>
+/*
  <?php
 $servername = "localhost";
 $username = "your_user";
@@ -18,6 +19,7 @@ if ($conn->connect_error) {
 
 
 ?>
+*/
 
 ![image](https://user-images.githubusercontent.com/80107228/110134568-1c032500-7e00-11eb-9949-7bbff769d92a.png)
 
