@@ -43,7 +43,6 @@ include 'checkAuth.php';
         <div class="col-md-2 col-6" >
            <a href="logout.php" style="color:white;">ออกจากระบบ</a>
         </div>
-  
     </div>
     
     <ul class="nav nav-tabs" style="margin-top:5px">

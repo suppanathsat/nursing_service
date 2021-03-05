@@ -44,7 +44,7 @@
           $lname = $row['lname'];
       }
     }
-    if($_SESSION['auth'] == "admin" || $_SESSION['auth'] == "เจ้าของ" || $_SESSION['auth'] == "พยาบาล" || $_SESSION['auth'] == "ผู้ช่วยพยาบาล" || $_SESSION['auth'] == "หมอ"  )
+    if($_SESSION['auth'] == "admin" || $_SESSION['auth'] == "เจ้าของ" || $_SESSION['auth'] == "พยาบาล" || $_SESSION['auth'] == "ผู้ช่วยพยาบาล" || $_SESSION['auth'] == "หมอ" || $_SESSION['auth'] == "พนักงาน"  )
     {
 ?>
 <!DOCTYPE html>
@@ -217,13 +217,16 @@
                     <th scope="col">อุณหภูมิ(&#8451;)</th>
                     <th scope="col">ความดัน(mmHg)</th>
                     <th scope="col">O<sub>2</sub>%</th>
+                    <th scope="col">ชีพจร</th>
+                    <th scope="col">อัตราการหายใจ</th>                    
                     <th scope="col">เปลี่ยนผ้าอ้อม</th>
+                    
                   </tr>
                 </thead>
                 <tbody>
                     <?php
                           //เลือกของผู้สูงอายุคนนี้ เฉพาะวันนี้และเมื่อวาน
-                          $sql = "SELECT DATE(time_stampt) as mydate,TIME(time_stampt) as mytime,temp,pleasuerup,pleasuerdown,hart,pam,user_id as date FROM nursenote where elder_id = $elder_id and ( DATEDIFF(CURDATE(), time_stampt) = 0 or DATEDIFF(CURDATE(), time_stampt) = 1)";
+                          $sql = "SELECT DATE(time_stampt) as mydate,TIME(time_stampt) as mytime,temp,pleasuerup,pleasuerdown,hart,p,r,pam,user_id as date FROM nursenote where elder_id = $elder_id and ( DATEDIFF(CURDATE(), time_stampt) = 0 or DATEDIFF(CURDATE(), time_stampt) = 1)";
                           $result = $conn->query($sql);
                           $show = "";
                           if ($result->num_rows > 0) {
@@ -280,6 +283,17 @@
                                     $show .= "<td style='color:red;'>".$temp."</td>";
                                   }
                                   $show .= "<td>".$row['hart']."</td>";
+
+                                  if($row['p'] == 0){
+                                    $row['p'] = "-";
+                                  }
+
+                                  if($row['r'] == 0){
+                                    $row['r'] = "-";
+                                  }
+  
+                                  $show .= "<td>".$row['p']."</td>";
+                                  $show .= "<td>".$row['r']."</td>";
                                   $show .= "<td>".$row['pam']."</td>";
                                 $show .= "</tr>";
                             }

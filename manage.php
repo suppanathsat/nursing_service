@@ -174,6 +174,18 @@ include 'checkAuth.php';
                             <input type="text" class="form-control" style="text-align:center;" name="hart" id="hart">
                     </div>
                </div>
+               <div class="row" style="margin-top:15px;">
+                    <div class="form-group col-md-6 col-6 text-center" style="margin:auto">   
+                            <label for="p">ชีพจร(p)</label>
+                            <input type="text" class="form-control" style="text-align:center;" name="p" id="p">
+                    </div>
+               </div>
+               <div class="row" style="margin-top:15px;">
+                    <div class="form-group col-md-6 col-6 text-center" style="margin:auto">   
+                            <label for="p">อัตราการหายใจ(r)</label>
+                            <input type="text" class="form-control" style="text-align:center;" name="r" id="r">
+                    </div>
+               </div>
             
         </div>
         <div class="modal-footer">
@@ -231,19 +243,6 @@ include 'checkAuth.php';
         });
 
         function addVitalSign(id) {
-            var bed = "";
-            var name = "";
-            
-            $(this).parent().siblings().each(function() {
-                if(this.cellIndex == 0){
-                   bed = $(this).text();
-                }
-                if(this.cellIndex == 2){
-                   name = $(this).text();
-                }    
-                //alert( 'index ' + this.cellIndex + ': ' + $(this).text() );
-            });
-            $("#elderTitle").html("เตียงที่ : " + bed + " " + name);
             $("#elder_id").val(id);
             $("#temp").val("");
             $("#pleasuer1").val("");
