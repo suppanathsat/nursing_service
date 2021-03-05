@@ -16,8 +16,15 @@ if ($conn->connect_error) {<br>
     die("Connection failed: " . $conn->connect_error);<br>
 }<br>
 
+หน้าหลัก<br>
+![image](https://user-images.githubusercontent.com/80107228/110134977-9469e600-7e00-11eb-96f5-473fbcb09858.png)
 
 
-![image](https://user-images.githubusercontent.com/80107228/110134568-1c032500-7e00-11eb-9949-7bbff769d92a.png)
+ล็อกอิน<br>
+![image](https://user-images.githubusercontent.com/80107228/110135131-b9f6ef80-7e00-11eb-9821-ea388f80f297.png)
+
+
+หน้าแอดมิน<br>
+![image](https://user-images.githubusercontent.com/80107228/110135439-1a862c80-7e01-11eb-8acc-3828670ce9f7.png)
 
 
